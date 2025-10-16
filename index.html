@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title> سيتي اير </title>
+  <meta name="description" content="CityAir - متخصصون في تصميم وتصنيع وتركيب شبكات duct (مواسير) للتكييف المركزي: تصنيع مجاري الهواء، عزل، تفريغ، وتوزيع الهواء للمنازل والمباني التجارية." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    .glass { background: rgba(255,255,255,0.6); backdrop-filter: blur(6px); }
+    .hero-bg { background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=60'); background-size: cover; background-position: center; }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 overflow-x-hidden">
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    window.addEventListener('load', () => {
+      gsap.from('header', { y: -100, opacity: 0, duration: 1 });
+      gsap.from('.hero-bg h2', { y: 50, opacity: 0, duration: 1.2 });
+      gsap.from('.hero-bg p', { y: 80, opacity: 0, duration: 1.4 });
+      gsap.from('.hero-bg a', { y: 100, opacity: 0, duration: 1.6 });
+    });
+  </script>
+
+  <!-- Header -->
+  <header class="bg-white/90 shadow fixed w-full top-0 z-50 backdrop-blur">
+    <div class="max-w-7xl mx-auto p-4 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <img src="https://i.ibb.co/7d2N3frL/91b84e29-3106-4461-838a-2707a8ee8e3b.png" alt="CityAir logo" class="w-10 h-10" />
+        <div>
+          <h1 class="text-xl font-semibold">CityAir Duct</h1>
+          <p class="text-sm text-gray-500">شركة سيتي اير للتصنيع مستلزمات التكييف</p>
+        </div>
+      </a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="#services" class="hover:text-blue-600 transition">الخدمات</a>
+        <a href="#projects" class="hover:text-blue-600 transition">المشروعات</a>
+        <a href="#gallery" class="hover:text-blue-600 transition">معرض الصور</a>
+        <a href="#contact" class="px-4 py-2 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition">اتصل بنا</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden text-2xl">☰</button>
+    </div>
+    <div id="mobile-menu" class="hidden flex-col bg-white md:hidden border-t">
+      <a href="#services" class="p-3 hover:bg-gray-100">الخدمات</a>
+      <a href="#projects" class="p-3 hover:bg-gray-100">المشروعات</a>
+      <a href="#gallery" class="p-3 hover:bg-gray-100">معرض الصور</a>
+      <a href="#contact" class="p-3 bg-blue-600 text-white">اتصل بنا</a>
+    </div>
+    <script>
+      document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+      });
+    </script>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg text-white text-center py-40 relative overflow-hidden flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative z-10 max-w-3xl mx-auto px-6">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">خبراء شبكات DUCT للتكييف المركزي</h2>
+      <p class="mb-6 text-lg text-gray-200">من التصميم للتصنيع والتركيب — حلول احترافية بجودة عالية لكل مشروع.</p>
+      <a href="#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700 transition transform hover:scale-105">احصل على عرض سعر مجاني</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">خدماتنا</h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div class="p-6 shadow rounded-xl bg-gray-50 hover:-translate-y-2 transition-transform duration-300" data-aos="flip-left">
+          <img src="https://i.ibb.co/DH680Wdq/download.jpg" alt="تصميم Duct" class="w-full h-48 object-cover rounded mb-4" />
+          <h4 class="font-semibold mb-2 text-lg">تصميم هندسي دقيق</h4>
+          <p class="text-gray-600 text-sm">نقوم بتصميم أنظمة Duct وفق المعايير الفنية والهندسية الحديثة لتحقيق أفضل كفاءة هواء.</p>
+        </div>
+        <div class="p-6 shadow rounded-xl bg-gray-50 hover:-translate-y-2 transition-transform duration-300" data-aos="flip-left" data-aos-delay="200">
+          <img src="https://i.ibb.co/hRmcFcb9/download.jpg" alt="تركيب Duct" class="w-full h-48 object-cover rounded mb-4" />
+          <h4 class="font-semibold mb-2 text-lg">تصنيع وتركيب شبكات Duct</h4>
+          <p class="text-gray-600 text-sm">نقدم تصنيعًا عالي الجودة باستخدام مجلفن وألومنيوم مع تركيب دقيق ومتقن في الموقع.</p>
+        </div>
+        <div class="p-6 shadow rounded-xl bg-gray-50 hover:-translate-y-2 transition-transform duration-300" data-aos="flip-left" data-aos-delay="400">
+          <img src="https://i.ibb.co/jP2Rkh0t/images.jpg" alt="عزل duct" class="w-full h-48 object-cover rounded mb-4" />
+          <h4 class="font-semibold mb-2 text-lg">عزل وصيانة متكاملة</h4>
+          <p class="text-gray-600 text-sm">نقوم بالعزل الحراري والصوتي وفحص شامل لشبكات الهواء لتحسين الأداء وتقليل الفاقد.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Slider -->
+  <section id="projects" class="bg-gray-50 py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">مشروعاتنا</h3>
+      <div class="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4">
+        <img src="https://images.unsplash.com/photo-1605902711622-cfb43c44367e?auto=format&fit=crop&w=1000&q=60" class="w-96 h-60 object-cover rounded-xl shadow-lg snap-center hover:scale-105 transition-transform" />
+        <img src="https://images.unsplash.com/photo-1614787216822-0b5b1b6d2e6b?auto=format&fit=crop&w=1000&q=60" class="w-96 h-60 object-cover rounded-xl shadow-lg snap-center hover:scale-105 transition-transform" />
+        <img src="https://images.unsplash.com/photo-1598032892552-0c99b0b8f8b1?auto=format&fit=crop&w=1000&q=60" class="w-96 h-60 object-cover rounded-xl shadow-lg snap-center hover:scale-105 transition-transform" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="bg-white py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-12" data-aos="fade-up">معرض الصور</h3>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <img src="https://i.ibb.co/MyQV8QyV/Chat-GPT-Image-16-2025-12-30-38.png" alt="duct1" class="rounded-lg h-40 w-full object-cover hover:scale-105 transition-transform" data-aos="zoom-in" />
+        <img src="https://i.ibb.co/B57kTD8G/554432404-1343700260463981-6530900553724203813-n.jpg" alt="duct2" class="rounded-lg h-40 w-full object-cover hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="100" />
+        <img src="https://i.ibb.co/v4HsW0jB/550516805-2612553302434995-7593187264314994195-n.jpg" alt="duct3" class="rounded-lg h-40 w-full object-cover hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="200" />
+        <img src="https://i.ibb.co/0Vj5mVWy/565381176-1561037508230773-8869870185268019417-n.jpg" alt="duct4" class="rounded-lg h-40 w-full object-cover hover:scale-105 transition-transform" data-aos="zoom-in" data-aos-delay="300" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-blue-50 py-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div data-aos="fade-right">
+        <h3 class="text-3xl font-bold mb-4">اتصل بنا</h3>
+        <p class="text-gray-600 mb-4">تواصل معنا لتصميم وتنفيذ شبكات Duct باحترافية عالية.</p>
+        <ul class="text-gray-700 space-y-2">
+          <li>📞 <a href="tel:+201234567890" class="text-blue-600"> 01159545645</a></li>
+          <li>✉️ <a href="mailto:info@cityair.com" class="text-blue-600">info@cityair.com</a></li>
+          <li>📍 القاهرة، مصر</li>
+        </ul>
+      </div>
+      <form class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="fade-left">
+        <label class="block mb-2 text-sm">الاسم الكامل</label>
+        <input type="text" class="w-full mb-3 p-3 border rounded focus:ring focus:ring-blue-200" placeholder="اسمك" />
+        <label class="block mb-2 text-sm">رقم الهاتف</label>
+        <input type="tel" class="w-full mb-3 p-3 border rounded focus:ring focus:ring-blue-200" placeholder="رقم الهاتف" />
+        <label class="block mb-2 text-sm">ملاحظات أو تفاصيل المشروع</label>
+        <textarea class="w-full mb-4 p-3 border rounded h-28 focus:ring focus:ring-blue-200" placeholder="أضف تفاصيل المشروع أو المساحة"></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition transform hover:scale-105">إرسال</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-gray-300 py-8" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-right">
+      <p>© 2025 CityAir Duct. جميع الحقوق محفوظة.</p>
+      <p>تصميم وبرمجة بواسطة <span class="text-blue-400">CityAir Digital</span></p>
+    </div>
+  </footer>
+</body>
+</html>
